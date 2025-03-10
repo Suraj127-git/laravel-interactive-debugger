@@ -1,0 +1,29 @@
+{
+  "name": "shettyanna/laravel-interactive-debugger",
+  "description": "A real-time, interactive debugging panel for Laravel applications.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "^10.0|^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Shettyanna\\LaravelInteractiveDebugger\\": "src/"
+    },
+    "files": [
+      "src/Helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Shettyanna\\LaravelInteractiveDebugger\\LaravelInteractiveDebuggerServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "pestphp/pest": "^1.0",
+    "orchestra/testbench": "^7.0"
+  }
+}
