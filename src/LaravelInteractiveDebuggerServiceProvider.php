@@ -41,6 +41,11 @@ class LaravelInteractiveDebuggerServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/interactive-debugger.php', 'interactive-debugger');
+        $this->mergeConfigFrom(__DIR__.'/../config/interactive-debugger.php', 'interactive-debugger');
+        
+        // Register the middleware only if not running in console or in testing environment
+        if (!$this->app->runningInConsole() && !$this->app->environment('testing')) {
+            $this->app->register(RouteServiceProvider::class);
+        }
     }
 }

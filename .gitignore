@@ -1,0 +1,13 @@
+# Laravel package development
+
+# Composer dependencies
+vendor/
+
+# PHPUnit
+# phpunit.xml
+# phpunit.result.cache
+
+# Code coverage
+clover.xml
+coverage.clover
+coverage.xml

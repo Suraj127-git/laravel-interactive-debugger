@@ -4,16 +4,21 @@
   "type": "library",
   "license": "MIT",
   "require": {
-    "php": "^8.1",
-    "illuminate/support": "^10.0|^11.0"
+    "php": "^7.3|^8.0|^8.1|^8.2",
+    "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0"
   },
   "autoload": {
-    "psr-4": {
-      "Shettyanna\\LaravelInteractiveDebugger\\": "src/"
-    },
     "files": [
       "src/Helpers.php"
-    ]
+    ],
+    "psr-4": {
+      "Shettyanna\\LaravelInteractiveDebugger\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Shettyanna\\LaravelInteractiveDebugger\\Tests\\": "tests/"
+    }
   },
   "extra": {
     "laravel": {
@@ -25,5 +30,10 @@
   "require-dev": {
     "pestphp/pest": "^1.0",
     "orchestra/testbench": "^7.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
   }
 }
